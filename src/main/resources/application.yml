@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    open-in-view: 'false'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: 'TRUE'
+    hibernate:
+      ddl-auto: update
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/restGames?createDatabaseIfNotExist=true&useSSL=false
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: root
+logging:
+  level:
+    org:
+      nodeValue: WARN
+      hibernate:
+        type:
+          descriptor: TRACE
+        SQL: DEBUG
+    blog: WARN
